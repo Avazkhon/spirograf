@@ -6,15 +6,25 @@
 	<link rel="stylesheet" type="text/css" href="css/animal.css">
 </head>
 <body>
-	<canvas id="c1" width="800" height="600"></canvas><br>
+	<canvas id="c1" width="800" height="800"></canvas><br>
 	<div class="tools">
 		<input type="color" id="color"><br>
-		<input type="number" name="" id="rn"><br>
-		<input type="range" name="R" id="R" min="-150" max="150" step="1"><br>
-		<input type="number" name="" id="rN"><br>
-		<input type="range" name="r" id="r" min="-150" max="150" step="1"><br>
-		<input type="number" name="" id="dN"><br>
-		<input type="range" name="d" id="d" min="-150" max="150" step="1"><br>
+		<p>
+			R:<input type="number" name="" id="rn"><br>
+			<input type="range" name="R" id="R" min="-150" max="150" step="1"><br>
+		</p>
+		<p>
+			r:<input type="number" name="" id="rN"><br>
+			<input type="range" name="r" id="r" min="-150" max="150" step="1"><br>
+		</p>
+		<p>
+			d:<input type="number" name="" id="dN"><br>
+			<input type="range" name="d" id="d" min="-150" max="150" step="1"><br>
+		</p>
+		<p>
+			s:<input type="number" name="" id="speedMum"><br>
+			<input type="range" name="d" id="speedRange" min="5" max="500" step="5"><br>
+		</p>
 		<div>
 			<input type="button" value="start" id="start" onclick="start()">
 		</div>
@@ -24,6 +34,7 @@
 	</div>
 	<div class="element">
 		<input type="button" value="star" onclick="star()">
+		<input type="button" value="fire" onclick="fire()">
 	</div>
 	<script type="text/javascript" src="js/app.js" ></script>
 </body>
