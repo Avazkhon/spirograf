@@ -152,3 +152,32 @@ canvas.onclick = function(event){
 	   }
 	}big()
 }
+
+
+function bal () {
+	let circle = Path2D;
+	let xMove;
+	let yMove;
+	canvas.onclick = () => {
+		let xCircle = 400;
+		let yCircle = 400;
+		let circle = new Path2D();
+
+		circle.arc(xCircle, yCircle, 50, 0, Math.PI*2);
+		ctx.stroke(circle);
+
+		if(xMove == xCircle && yMove ==yCircle) {
+			circle.arc(xCircle, yCircle, 50, 0, Math.PI*2);
+		}
+		else{
+			clearDraw()
+		}
+
+	}
+
+	canvas.onmousemove = (event)=> {
+		xMove = event.offsetX;
+		yMove = event.offsetY;
+		console.log(xMove, yMove)
+	} 
+}bal()
