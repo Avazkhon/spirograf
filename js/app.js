@@ -130,3 +130,25 @@ function fire () {
 		}
 	}
 }
+
+////////
+
+canvas.onclick = function(event){
+	let x = event.offsetX;
+	let y = event.offsetY;
+	let count = 5;
+	let circle = new Path2D();
+	function big () {
+		count = count + 10;
+		r++
+		ctx.fillStyle = myColor;
+	    circle.arc(x, y, count, 0, Math.PI*2);
+	    ctx.stroke(circle);
+	  	if(count <= 50) {
+	   		setTimeout(big, 100 )
+	   	}
+	  	if(count > 50) {
+	   		ctx.clearRect(0, 0, 800, 800)
+	   }
+	}big()
+}
